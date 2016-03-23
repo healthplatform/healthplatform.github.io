@@ -1,3 +1,18 @@
-<!doctype html><html ng-app="healthPlatform" ng-strict-di=""><head><meta charset="utf-8"><title>healthPlatform</title><meta name="description" content=""><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="styles/vendor-f43f3efb77.css"><link rel="stylesheet" href="styles/app-dd472010e4.css"></head><body><!--[if lt IE 10]>
- <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
- <![endif]--><div ui-view=""></div><script src="scripts/vendor-9073c9dafe.js"></script><script src="scripts/app-f2615f68bb.js"></script></body></html>
+<!doctype html><html ng-app="healthPlatform"><head><meta charset="utf-8"><title>healthPlatform</title><meta name="description" content=""><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="styles/vendor-f43f3efb77.css"><link rel="stylesheet" href="styles/app-a5ff5989a8.css"></head><body><!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+ your browser</a> to improve your experience.</p>
+<![endif]--><div ui-view=""></div><script src="scripts/vendor-9073c9dafe.js"></script><script src="scripts/app-a064e62c0d.js"></script><script>
+  locationHashChanged();
+  function locationHashChanged() {
+    var b = document.getElementsByTagName('body')[0];
+    location.hash === "#/" ? b.classList.remove('bg-steel') : b.classList.add('bg-steel');
+  }
+  window.onhashchange = locationHashChanged;
+</script><script>$(function () {
+  $('.sidebar').on('click', 'li', function () {
+    if (!$(this).hasClass('active')) {
+      $('.sidebar li').removeClass('active');
+      $(this).addClass('active');
+    }
+  })
+})</script></body></html>
